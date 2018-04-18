@@ -328,10 +328,12 @@ d.run(() => {
 						workerController: workersControllerPath,
 						perMessageDeflate: false,
 						secretKey: 'liskSecretKey',
+						handshakeTimeout: 3000,
+						ackTimeout: 3000,
 						pingInterval: 5000,
 						// How many milliseconds to wait without receiving a ping
 						// before closing the socket
-						pingTimeout: 60000,
+						pingTimeout: 8000,
 						// Maximum amount of milliseconds to wait before force-killing
 						// a process after it was passed a 'SIGTERM' or 'SIGUSR2' signal
 						processTermTimeout: 10000,
